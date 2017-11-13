@@ -16,13 +16,15 @@ char next3Char;
 int lexLen;
 int token;
 int nextToken;
+
 FILE *inFile;
-enum
-	{
-		AND=258,AS,ASSERT,BREAK,CLASS,CONTINUE,DEF,DEL,ELIF,ELSE,EXCEPT,EXEC,FINALLY,
-		FOR,FROM,GLOBAL,IF,IMPORT,IN,IS,LAMBDA,NOT,OR,PASS,PRINT,RAISE,RETURN,TRY,
-		WHILE,WITH,YIELD,EQU,GEQU,LEQU,DEQU,ERROR,RET,ID,INT
-	};
+
+enum{
+	AND=258,AS,ASSERT,BREAK,CLASS,CONTINUE,DEF,DEL,ELIF,ELSE,EXCEPT,EXEC,FINALLY,
+	FOR,FROM,GLOBAL,IF,IMPORT,IN,IS,LAMBDA,NOT,OR,PASS,PRINT,RAISE,RETURN,TRY,
+	WHILE,WITH,YIELD,EQU,GEQU,LEQU,DEQU,ERROR,RET,ID,INT
+};
+
 char* keywords[]={
                   "and","as","assert","break","class","continue","def","del","elif","else","except"
                   "exec","finally","for","from","global","if","import","in","is","lambda","not","or"
@@ -33,7 +35,7 @@ void addChar(){
 	if(lexLen<=MAX_LEN-2){
 			lexeme[lexLen++]=nextChar;
 			lexeme[lexLen]=0;
-		}
+	}
 	else
 		printf("ERROR:lexeme is too long. \n");
 }
