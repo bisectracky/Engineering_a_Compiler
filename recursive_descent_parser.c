@@ -27,16 +27,7 @@ char* stringcp(char* src);
 void next();
 void Error();
 int sym(char check,int mode);
-past newnode();
-past newIf();
-past newWhile();
-past newReturn();
-past newPrint();
-past newScan();
-past newID();
-past newNum();
-past newStr();
-past newVoid();
+
 
 past program();
 past external_declaration();
@@ -56,6 +47,18 @@ past cmp_expr();
 past add_expr();
 past mul_expr();
 past primary_expr();
+
+past newnode();
+past newIf();
+past newWhile();
+past newReturn();
+past newPrint();
+past newScan();
+past newID();
+past newNum();
+past newStr();
+past newVoid();
+
 past expr_list();
 past id_list();
 
