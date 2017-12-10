@@ -665,6 +665,7 @@ past exter_declaration(){
     return l;
 }
 
+
 past expr_dec_list(){
     past p=exter_declaration(),q=NULL,l=newnode();
     l->type="experDeclarationList";
